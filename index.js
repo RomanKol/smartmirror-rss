@@ -3,7 +3,7 @@
 var express = require('express');
 var app = express();
 
-var controller = require('./controller');
+var controller = require('./app/controller');
 
 app.set('views', __dirname);
 app.set('view engine', 'jade');
