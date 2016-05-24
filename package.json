@@ -19,7 +19,7 @@
     "express": "^4.13.4",
     "jade": "^1.11.0"
   },
-  "smartmirror-settings": {
+  "smartmirror": {
     "url": {
       "type": "string",
       "desc": "URL to RSS Feed"
