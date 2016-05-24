@@ -10,9 +10,9 @@ app.set('view engine', 'jade');
 
 app.get('/', function (req, res) {
   let url = 'http://www.heise.de/newsticker/heise-atom.xml'
-  controller.get(url)
+  controller.get({url: url})
   .then((feed) => {
-    res.render('view.jade', {
+    res.render('app/view.jade', {
       title: 'RSS feed Reader',
       feed: feed
     });

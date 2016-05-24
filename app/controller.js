@@ -1,8 +1,10 @@
 'use strict';
 
-exports.get = function(url) {
+exports.get = function(params) {
   // Return new Promise
   return new Promise((resolve, reject) => {
+
+    let url = params.url;
 
     // Select http or https module, depending on reqested url
     const lib = url.startsWith('https') ? require('https') : require('http');
@@ -26,8 +28,7 @@ exports.get = function(url) {
 
       // We are done, resolve promise with those joined chunks
       response.on('end', () => {
-        let json = JSON.parse(body.join(''));
-        resolve(json.responseData.feed);
+        resolve(JSON.parse(body.join(''));
       });
     });
 
