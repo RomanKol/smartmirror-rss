@@ -28,7 +28,7 @@ exports.get = function(params) {
 
       // We are done, resolve promise with those joined chunks
       response.on('end', () => {
-        resolve(JSON.parse(body.join(''));
+        resolve(JSON.parse(body.join('')));
       });
     });
 
