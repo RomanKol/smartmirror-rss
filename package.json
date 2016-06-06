@@ -20,9 +20,15 @@
     "jade": "^1.11.0"
   },
   "smartmirror": {
-    "url": {
-      "type": "string",
-      "desc": "URL to RSS Feed"
+    "settings": {
+      "url": {
+        "type": "string",
+        "desc": "URL to RSS Feed"
+      }
+    },
+    "size": {
+      "x": 4,
+      "y": 2
     }
   }
 }
