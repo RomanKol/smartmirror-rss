@@ -26,6 +26,6 @@
         "desc": "URL to RSS Feed"
       }
     },
-    "size": "4x2"
+    "size": ["4x2"]
   }
 }
