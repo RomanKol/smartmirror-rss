@@ -13,8 +13,7 @@ app.get('/', function (req, res) {
   controller.get({url: url})
   .then((feed) => {
     res.render('app/view.jade', {
-      title: 'RSS feed Reader',
-      feed: feed
+      data: feed,
     });
   });
 });
