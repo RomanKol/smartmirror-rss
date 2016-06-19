@@ -24,6 +24,10 @@
       "url": {
         "type": "string",
         "desc": "URL to RSS Feed"
+      },
+      "timer": {
+        "type": "number",
+        "desc": "Timer"
       }
     },
     "size": ["4x2"]

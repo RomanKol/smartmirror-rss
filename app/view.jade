@@ -25,6 +25,7 @@ script.
   var module = document.getElementById('widget-#{widget._id}'),
       wrapper = module.querySelector('div'),
       articles = module.querySelectorAll('article');
+  var timer = 1000 * #{widget.params.timer} || 1000*15;
   var index = 1;
 
   setInterval(function(){
@@ -33,7 +34,7 @@ script.
     }
     wrapper.style.transform = 'translateY(-' + articles[index].offsetTop + 'px)';
     index++;
-  }, 1000*15);
+  }, timer);
 
 
 
