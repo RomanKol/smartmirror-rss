@@ -15,7 +15,7 @@
   ],
   "author": "Roman Kollatschny",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "express": "^4.13.4",
     "jade": "^1.11.0"
   },
