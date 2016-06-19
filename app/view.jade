@@ -1,6 +1,41 @@
-section
-  each entry in data.entries
-    article
-      header
-        h2=entry.title
-      p=entry.contentSnippet
+each entry in data.entries
+  article
+    h2=entry.title
+    p=entry.contentSnippet
+
+style.
+  #widget-#{widget._id} {
+    overflow: hidden;
+  }
+
+  #widget-#{widget._id} div {
+    transition: transform 750ms;
+    transform: translateY(0px);
+  }
+
+  #widget-#{widget._id} article h2 {
+    margin-top: 0;
+  }
+
+script.
+  var module = document.getElementById('widget-#{widget._id}'),
+      wrapper = module.querySelector('div'),
+      articles = module.querySelectorAll('article');
+  var index = 1;
+
+  setInterval(function(){
+    if(index == articles.length) {
+      index = 0;
+    }
+    wrapper.style.transform = 'translateY(-' + (articles[index].offsetTop - 10) + 'px)';
+    index++;
+  }, 1000*15);
+
+
+
+
+
+
+
+
+
