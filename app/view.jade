@@ -13,8 +13,12 @@ style.
     transform: translateY(0px);
   }
 
-  #widget-#{widget._id} article h2 {
-    margin-top: 0;
+  #widget-#{widget._id} article {
+    margin-bottom: 20px;
+  }
+
+  #widget-#{widget._id} h2, #widget-#{widget._id} p {
+    margin: 0 0 10px;
   }
 
 script.
@@ -27,7 +31,7 @@ script.
     if(index == articles.length) {
       index = 0;
     }
-    wrapper.style.transform = 'translateY(-' + (articles[index].offsetTop - 10) + 'px)';
+    wrapper.style.transform = 'translateY(-' + articles[index].offsetTop + 'px)';
     index++;
   }, 1000*15);
 
