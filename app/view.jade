@@ -22,7 +22,7 @@ style.
   }
 
 script.
-  var module = document.getElementById(widget._id),
+  var module = document.getElementById('widget-#{widget._id}'),
       wrapper = module.querySelector('div'),
       articles = module.querySelectorAll('article');
   var timer = 1000 * #{widget.settings.timer} || 1000*15;
