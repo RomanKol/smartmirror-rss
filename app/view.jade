@@ -28,13 +28,22 @@ script.
   var timer = 1000 * #{widget.settings.timer} || 1000*15;
   var index = 1;
 
-  setInterval(function(){
-    if(index == articles.length) {
+  function next() {
+      if(index == articles.length) {
       index = 0;
     }
     wrapper.style.transform = 'translateY(-' + articles[index].offsetTop + 'px)';
     index++;
-  }, timer);
+  }
+
+  if widget.gestureSupport && widget.gesture != null
+    socket.on('#{widget.gesture.gestureType}', function(data) {
+      next();
+    });
+  else
+    setInterval(function(){
+      next();
+    }, timer);
 
 
 
