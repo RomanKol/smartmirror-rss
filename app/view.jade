@@ -36,7 +36,7 @@ script.
     index++;
   }
 
-  if widget.gestureSupport && widget.gesture != null
+  if #{widget.gestureSupport}
     socket.on('#{widget.gesture.gestureType}', function(data) {
       next();
     });
